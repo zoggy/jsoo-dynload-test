@@ -4,9 +4,6 @@ js_of_ocaml +dynlink.js +toplevel.js +weak.js --linkall --extern-fs --toplevel -
 
 ocamlfind ocamlc -c -package js_of_ocaml.ppx  -I `opam config var lib`/ocaml/compiler-libs plugin.ml
 
-ocamlfind ocamlc -o dummy.byte -package js_of_ocaml.ppx dynlink.cma dummy.ml
-
-js_of_ocaml -o plugin.js +toplevel.js  +dynlink.js +weak.js  -I ./ -I `opam config var lib`/ocaml/compiler-libs --file=plugin.cmo dummy.byte
-#js_of_ocaml plugin.cmo
+js_of_ocaml plugin.cmo
 
 
