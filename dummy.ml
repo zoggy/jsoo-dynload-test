@@ -1,0 +1,1 @@
+Dynlink.loadfile "plugin.cmo";;
